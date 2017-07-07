@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5BDE8A1-A6CB-41E9-AD97-1D5EF8FEFC7F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eCustoms</RootNamespace>
+    <AssemblyName>eCustoms</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FakeLabel, Version=1.0.4669.21883, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FakeLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Core, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Interop.Microsoft.Office.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigSettings.cs" />
+    <Compile Include="GetBeiAnDanDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetBeiAnDanDataForm.Designer.cs">
+      <DependentUpon>GetBeiAnDanDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetBeiAnDanReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetBeiAnDanReportForm.Designer.cs">
+      <DependentUpon>GetBeiAnDanReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetDistributionBeiAnDanDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetDistributionBeiAnDanDataForm.Designer.cs">
+      <DependentUpon>GetDistributionBeiAnDanDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetBomDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetBomDataForm.Designer.cs">
+      <DependentUpon>GetBomDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetBomReporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetBomReporForm.Designer.cs">
+      <DependentUpon>GetBomReporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetGongdanReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetGongdanReportForm.Designer.cs">
+      <DependentUpon>GetGongdanReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetGongDanDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetGongDanDataForm.Designer.cs">
+      <DependentUpon>GetGongDanDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetGongDanListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetGongDanListForm.Designer.cs">
+      <DependentUpon>GetGongDanListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetDistributionPingDanDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetDistributionPingDanDataForm.Designer.cs">
+      <DependentUpon>GetDistributionPingDanDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicDataForm.Designer.cs">
+      <DependentUpon>BasicDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUpFilterForm.Designer.cs">
+      <DependentUpon>PopUpFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUpInfoForm.Designer.cs">
+      <DependentUpon>PopUpInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RMBalanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMBalanceForm.Designer.cs">
+      <DependentUpon>RMBalanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMReceivingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMReceivingForm.Designer.cs">
+      <DependentUpon>RMReceivingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryBomDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryBomDataForm.Designer.cs">
+      <DependentUpon>HistoryBomDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryGongDanDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryGongDanDataForm.Designer.cs">
+      <DependentUpon>HistoryGongDanDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryBeiAnDanDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryBeiAnDanDataForm.Designer.cs">
+      <DependentUpon>HistoryBeiAnDanDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryPingDanDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryPingDanDataForm.Designer.cs">
+      <DependentUpon>HistoryPingDanDataForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GetBeiAnDanDataForm.resx">
+      <DependentUpon>GetBeiAnDanDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetBeiAnDanReportForm.resx">
+      <DependentUpon>GetBeiAnDanReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetDistributionBeiAnDanDataForm.resx">
+      <DependentUpon>GetDistributionBeiAnDanDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetBomDataForm.resx">
+      <DependentUpon>GetBomDataForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetBomReporForm.resx">
+      <DependentUpon>GetBomReporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetGongDanDataForm.resx">
+      <DependentUpon>GetGongDanDataForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetGongDanListForm.resx">
+      <DependentUpon>GetGongDanListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetGongdanReportForm.resx">
+      <DependentUpon>GetGongdanReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetDistributionPingDanDataForm.resx">
+      <DependentUpon>GetDistributionPingDanDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryBeiAnDanDataForm.resx">
+      <DependentUpon>HistoryBeiAnDanDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryBomDataForm.resx">
+      <DependentUpon>HistoryBomDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryGongDanDataForm.resx">
+      <DependentUpon>HistoryGongDanDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryPingDanDataForm.resx">
+      <DependentUpon>HistoryPingDanDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicDataForm.resx">
+      <DependentUpon>BasicDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUpFilterForm.resx">
+      <DependentUpon>PopUpFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUpInfoForm.resx">
+      <DependentUpon>PopUpInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RMBalanceForm.resx">
+      <DependentUpon>RMBalanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMReceivingForm.resx">
+      <DependentUpon>RMReceivingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Add.ico" />
+    <Content Include="Resources\Ball1.ico" />
+    <Content Include="Resources\Ball2.ico" />
+    <Content Include="Resources\Ball3.ico" />
+    <Content Include="Resources\Cancel.ico" />
+    <Content Include="Resources\Delete.ico" />
+    <Content Include="Resources\Edit.ico" />
+    <Content Include="Resources\Excel.ico" />
+    <Content Include="Resources\Find.ico" />
+    <Content Include="Resources\Flag1.ico" />
+    <Content Include="Resources\Flag2.ico" />
+    <Content Include="Resources\Flag3.ico" />
+    <Content Include="Resources\Flag4.ico" />
+    <Content Include="Resources\Flag5.ico" />
+    <Content Include="Resources\Flag6.ico" />
+    <Content Include="Resources\FormIcon.ico" />
+    <Content Include="Resources\Go.ico" />
+    <Content Include="Resources\Logo.jpg" />
+    <Content Include="Resources\Main.ico" />
+    <Content Include="Resources\Save.ico" />
+    <Content Include="Resources\Search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
