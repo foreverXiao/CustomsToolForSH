@@ -1,0 +1,3 @@
+SqlConnection:Data Source=SDSNG010V\MSSQLDEV1;Initial Catalog=eCustom_GC;Persist Security Info=True;User ID=eCustom_GC_Admin;Password=ecust@mgc;connect timeout=30;
+
+

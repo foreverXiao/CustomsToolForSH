@@ -1,0 +1,3 @@
+SqlConnection:Data Source=CN02-18X5BX1\SQLEXPRESS;Initial Catalog=eCustoms;Persist Security Info=True;User ID=sa;Password=Customs123;connect timeout=30;
+
+
