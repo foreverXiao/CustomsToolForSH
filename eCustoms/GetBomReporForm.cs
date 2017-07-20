@@ -247,9 +247,9 @@ namespace eCustoms
             if (!this.rbtnConsumption.Checked && !this.rbtnOriginalGoods.Checked)
             { MessageBox.Show("Please select consumption or original goods to download first.", "Prompt", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
             if (this.dgvConsmpt.RowCount == 0 && this.rbtnConsumption.Checked)
-            { MessageBox.Show("There is no data for consumption.", "Prompt", MessageBoxButtons.OK, MessageBoxIcon.Stop); return; }
+            { MessageBox.Show("There is no data for consumption.", "Prompt", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); return; }
             if (this.dgvOrgGoods.RowCount == 0 && this.rbtnOriginalGoods.Checked)
-            { MessageBox.Show("There is no data for Original Goods.", "Prompt", MessageBoxButtons.OK, MessageBoxIcon.Stop); return; }
+            { MessageBox.Show("There is no data for Original Goods.", "Prompt", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); return; }
 
             DialogResult dlgR = MessageBox.Show("Please select a document format:\n[Yes] Generate Excel as old version to upload to Customs system;\n[No] Generate Excel as new version to keep record and print out paper for Customs declaration;\n[Cancel] Reject to handle.", "Prompt", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
             if (dlgR == DialogResult.Yes)
@@ -365,7 +365,7 @@ namespace eCustoms
             }
             else if (dlgR == DialogResult.No)
             {
-                #region //old version
+                #region //Generate new version of Spreadsheet files for filing purpose
                 if (this.rbtnConsumption.Checked && this.dgvConsmpt.RowCount > 0)
                 {
                     Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
@@ -375,6 +375,11 @@ namespace eCustoms
                     string strBatchFg = String.Empty;
                     for (int i = 0; i < this.dgvConsmpt.RowCount; i++)
                     {
+                        //if this batch no has no single bonded material, it does not need to be saved for filing purpose. July.20.2017
+                        // Get the value of the third column in the grid, the value looks like 1000-GY7G350T/0006337069
+                        if (strBatchListWithoutUSDcomponent.IndexOf(this.dgvConsmpt[3, i].Value.ToString().Trim().Substring(this.dgvConsmpt[3, i].Value.ToString().Trim().IndexOf("/") + 1)) > 0)
+                        { continue; }; // Just skip for this iteration;
+
                         string strBOM1 = this.dgvConsmpt[0, i].Value.ToString().Trim();
                         if (String.Compare(strBOM1, strBatchFg) == 0) { iLineNo++; }
                         else { iLineNo = 1; strBatchFg = strBOM1; }
@@ -412,6 +417,10 @@ namespace eCustoms
                     int iActualRow = 0;
                     for (int m = 0; m < this.dgvOrgGoods.RowCount; m++)
                     {
+                        //if this batch no has no single bonded material, it does not need to be saved for filing purpose. July.20.2017
+                        // Get the value of the second column in the grid, the value looks like 1000-GY7G350T/0006337069
+                        if (strBatchListWithoutUSDcomponent.IndexOf(this.dgvConsmpt[2, m].Value.ToString().Trim().Substring(this.dgvConsmpt[2, m].Value.ToString().Trim().IndexOf("/") + 1)) > 0)
+                        { continue; }; // Just skip for this iteration;
                         if (String.IsNullOrEmpty(this.dgvOrgGoods[14, m].Value.ToString().Trim())) //The same mapping 'BOM In Customs'
                         {
                             iActualRow++;
@@ -527,7 +536,7 @@ namespace eCustoms
                     if (strBatchListWithoutUSDcomponent.IndexOf(strBatchNo) >= 0)  //update current BOM's gongdan used qty to keep the same with the frozen BOM
                     {
                         apprBomComm.CommandType = CommandType.Text;
-                        apprBomComm.CommandText = "UPDATE C_BOM SET [Freeze] = 1 AND [Remark] = [Remark] + 'Frozen by " + loginFrm.PublicUserName + " on " + System.DateTime.Now.ToString("M/d/yyyy HH:mm") + "' WHERE [Batch No] = '" + strBatchNo + "'";
+                        apprBomComm.CommandText = "UPDATE C_BOM SET [Freeze] = 1, [Remark] = 'Frozen by " + loginFrm.PublicUserName + " on " + System.DateTime.Now.ToString("M/d/yyyy HH:mm") + "' WHERE [Batch No] = '" + strBatchNo + "'";
                         apprBomComm.ExecuteNonQuery();
                     }
 

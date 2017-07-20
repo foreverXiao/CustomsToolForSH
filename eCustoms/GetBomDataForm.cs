@@ -937,6 +937,7 @@ namespace eCustoms
             {
                 bool bJudge = this.txtPathBom.Text.ToLower().Contains(".xlsx");
                 this.ImportBom(this.txtPathBom.Text.Trim(), bJudge);
+                ComsumptionRateEuqalTo100Percent();// Attach this function here to make sure operator will not miss this step  on July.17.2017
             }
             catch (Exception) { throw; }
         }
