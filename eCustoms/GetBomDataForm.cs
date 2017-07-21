@@ -294,9 +294,9 @@ namespace eCustoms
 
 
                 strReckBom = strReckBom.Remove(strReckBom.Length - 1);
-                string strSQL = "SELECT '' AS [Process Order No], '' AS [Actual Start Date], '' AS [Actual End Date], [Batch No], '' AS [FG No], '' AS [FG Description], " +
-                                "[Item No], [Item Description], [Lot No], [Inventory Type], [RM Category], 0 AS [FG Qty], 0.0 AS [RM Qty], 0.0 AS [Total Input Qty], " +
-                                "0.0 AS [Drools Qty], '' AS [Batch Path], [Consumption] FROM C_BOMDetail WHERE [Batch No] IN (" + strReckBom + ") AND [Consumption] > 0";
+                string strSQL = "SELECT '' AS [Process Order No], '' AS [Actual Start Date], '' AS [Actual End Date], C_BOMDetail.[Batch No], '' AS [FG No], '' AS [FG Description], " +
+                                "[Item No], [Item Description], [Lot No], [Inventory Type], [RM Category], [FG Qty], 0.0 AS [RM Qty],  [Total Input Qty], " +
+                                " 0.0 AS [Drools Qty], '' AS [Batch Path], [Consumption] FROM C_BOMDetail LEFT JOIN C_BOM ON C_BOMDetail.[Batch No] = C_BOM.[Batch No] WHERE C_BOMDetail.[Batch No] IN (" + strReckBom + ") AND [Consumption] > 0";
                 SqlDataAdapter BomAdp = new SqlDataAdapter(strSQL, BomConn);
                 DataTable dtReckData = new DataTable();
                 dtReckData = myTable.Clone();//Program will get data type as decimal instead of Int32 for Column [FG Qty], so added this sentence to make sure the new table is compatible with myTable on Jan.14.2017
@@ -318,6 +318,8 @@ namespace eCustoms
                             dr["Actual End Date"] = dtReckList.Rows[m]["Actual End Date"].ToString().Trim().ToUpper();
                             dr["FG No"] = dtReckList.Rows[m]["FG No"].ToString().Trim().ToUpper();
                             dr["FG Description"] = dtReckList.Rows[m]["FG Description"].ToString().Trim().ToUpper();
+                            decimal dcFgQtyInSubBOMdetail = Convert.ToDecimal(dr["FG Qty"].ToString().Trim());
+                            decimal dcTotalInputInSubBOMdetail = Convert.ToDecimal(dr["Total Input Qty"].ToString().Trim());
                             string strFgQty = dtReckList.Rows[m]["FG Qty"].ToString().Trim();
                             if (!String.IsNullOrEmpty(strFgQty)) { dr["FG Qty"] = Convert.ToInt32(strFgQty); }
                             string strTotalInputQty = dtReckList.Rows[m]["Total Input Qty"].ToString().Trim();
@@ -326,11 +328,12 @@ namespace eCustoms
                             if (!String.IsNullOrEmpty(strDroolsQty)) { dr["Drools Qty"] = Math.Round(Convert.ToDecimal(double.Parse(strDroolsQty)), 6); }
                             dr["Batch Path"] = "/" + dtReckList.Rows[m]["Batch No"].ToString().Trim() + "/" + strBatchNo;
                             decimal dConsumption = Math.Round(Convert.ToDecimal(double.Parse(dr["Consumption"].ToString().Trim())), 6);
-                            decimal dFgQty = Convert.ToDecimal(dtReckList.Rows[m]["FG Qty"].ToString().Trim());
+                            //decimal dLossRate = Math.Round(Convert.ToDecimal(double.Parse(dr["Qty Loss Rate"].ToString().Trim())), 6); ;
+                            //decimal dFgQty = Convert.ToDecimal(dtReckList.Rows[m]["FG Qty"].ToString().Trim());
                             decimal dReckQty = Math.Round(Convert.ToDecimal(double.Parse(dtReckList.Rows[m]["RM Qty"].ToString().Trim())), 6);
-                            decimal dTotalInputQty = Convert.ToDecimal(strTotalInputQty);
+                            //decimal dTotalInputQty = Convert.ToDecimal(strTotalInputQty);
                             //dr["RM Qty"] = Math.Round(dTotalInputQty * dReckQty * dConsumption / (dTotalInputQty - dFgQty), 6);
-                            dr["RM Qty"] = Math.Round(dReckQty * dConsumption, 6); //Revised on Mar.29.2017
+                            dr["RM Qty"] = Math.Round(dReckQty * dConsumption * dcTotalInputInSubBOMdetail / dcFgQtyInSubBOMdetail, 6); //Revised on Mar.29.2017
                         }
                         dtReckData.AcceptChanges();                        
                     }
@@ -565,16 +568,19 @@ namespace eCustoms
                 decimal dTotalRMCost = (decimal)dtRmCost.Compute("SUM([Total RM Cost(USD)])", "[Batch No]='" + strBatchNo + "' AND [FG No]='" + strFGNo + "'");
                 DataRow dr =  dtRmCost.Select("[Batch No]='" + strBatchNo + "' AND [FG No]='" + strFGNo + "'")[0];
                 decimal dFgQty = Convert.ToDecimal(dr["FG Qty"].ToString().Trim());
-                decimal dTotalInputQty = Math.Round(Convert.ToDecimal(double.Parse(dr["Total Input Qty"].ToString().Trim())), 6);
-
+                //decimal dTotalInputQty = Math.Round(Convert.ToDecimal(double.Parse(dr["Total Input Qty"].ToString().Trim())), 6);
+                decimal dTotalInputQty = (decimal)dtRmCost.Compute("SUM([RM Qty])", "[Batch No]='" + strBatchNo + "' AND [FG No]='" + strFGNo + "'");
+  
                 exeComm.Parameters.Clear();
                 exeComm.Parameters.Add("@OrderPrice", SqlDbType.Decimal).Value = Math.Round(dTotalRMCost / dFgQty, 2);
                 exeComm.Parameters.Add("@TotalRMCost", SqlDbType.Decimal).Value = Math.Round(dTotalRMCost, 2);
                 exeComm.Parameters.Add("@QtyLossRate", SqlDbType.Decimal).Value = Math.Round((1 - dFgQty / dTotalInputQty) * 100.0M, 6);
+                exeComm.Parameters.Add("@droolsQty", SqlDbType.Decimal).Value = dTotalInputQty - dFgQty;
+                exeComm.Parameters.Add("@totalInputQty", SqlDbType.Decimal).Value = dTotalInputQty;
                 exeComm.Parameters.Add("@BatchNo", SqlDbType.NVarChar).Value = strBatchNo;
                 exeComm.Parameters.Add("@FGNo", SqlDbType.NVarChar).Value = strFGNo;
-                exeComm.CommandText = "UPDATE M_DailyBOM SET [Order Price(USD)] = @OrderPrice, [Total RM Cost(USD)] = @TotalRMCost, [Qty Loss Rate] = @QtyLossRate " + 
-                                      "WHERE [Batch No] = @BatchNo AND [FG No] = @FGNo";
+                exeComm.CommandText = "UPDATE M_DailyBOM SET [Order Price(USD)] = @OrderPrice, [Total RM Cost(USD)] = @TotalRMCost, [Qty Loss Rate] = @QtyLossRate " +
+                                      ", [Drools Qty] = @droolsQty , [Total Input Qty] = @totalInputQty WHERE [Batch No] = @BatchNo AND [FG No] = @FGNo";
                 exeComm.ExecuteNonQuery();               
             }
             exeComm.Parameters.Clear();
@@ -1266,9 +1272,9 @@ namespace eCustoms
                 //if we can find a revised batch in BOM history, replace old batch No. with a new one like 'XXXXXXXXXXR'
                 if (dtFGno_BatchNoListInBOM.Select("[FG No] = '" + itemNo1LotNo1["Item No"].ToString() + "' And [Batch NO] = '" + itemNo1LotNo1["Lot No"].ToString() + "R'").Length > 0)
                 {
-                    message1 += "\n This batch has a revised on in BOM history with suffix 'R': " + itemNo1LotNo1["Item No"].ToString() + "R;" + "\n " + itemNo1LotNo1["Process Order No"] + ";" + itemNo1LotNo1["Item No"].ToString() + ";" + itemNo1LotNo1["Lot No"].ToString();
+                    message1 += "\n This batch has a revised on in BOM history with suffix 'R': " + itemNo1LotNo1["Lot No"].ToString() + "R;" + "\n " + itemNo1LotNo1["Process Order No"] + ";" + itemNo1LotNo1["Item No"].ToString() + ";" + itemNo1LotNo1["Lot No"].ToString();
                     DataRow dr = dtMessage.NewRow();
-                    dr[0] = "This batch has a revised version in BOM history with suffix 'R': " + itemNo1LotNo1["Item No"].ToString() + "R ";
+                    dr[0] = "This batch has a revised version in BOM history with suffix 'R': " + itemNo1LotNo1["Lot No"].ToString() + "R ";
                     dr[1] = itemNo1LotNo1["Process Order No"].ToString();
                     dr[2] = itemNo1LotNo1["Item No"].ToString();
                     dr[3] = itemNo1LotNo1["Lot No"].ToString();

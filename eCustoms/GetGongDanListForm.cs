@@ -263,7 +263,7 @@ namespace eCustoms
             foreach (DataRow dr in dtGongDanList.Rows) { strBatchNoList += "'" + dr["Batch No"].ToString().Trim() + "',"; }
             strBatchNoList = strBatchNoList.Remove(strBatchNoList.Trim().Length - 1);
             //gdlComm.CommandText = "SELECT [Batch No], MAX([GongDan No]) AS [GongDan No] FROM C_GongDan GROUP BY [Batch No] HAVING [Batch No] IN (" + strBatchNoList + ")";
-            gdlComm.CommandText = "SELECT [Batch No], max(RIGHT([GongDan no],CHARINDEX('-',REVERSE([GongDan no]),0)-1)) AS [GongDan No] FROM C_GongDan GROUP BY [Batch No] HAVING [Batch No] IN (" + strBatchNoList + ")"; //June.29.2017
+            gdlComm.CommandText = "SELECT [Batch No], max(convert(int, RIGHT([GongDan no],CHARINDEX('-',REVERSE([GongDan no]),0)-1))) AS [GongDan No] FROM C_GongDan GROUP BY [Batch No] HAVING [Batch No] IN (" + strBatchNoList + ")"; //June.29.2017
             gdlAdapter = new SqlDataAdapter();
             gdlAdapter.SelectCommand = gdlComm;
             DataTable dtMaxGD = new DataTable();

@@ -49,12 +49,14 @@
             this.cmsFilter = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiExceptionFilter = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiQtyOverFlow = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiPriceZero = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiChooseFilter = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExcludeFilter = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRefreshFilter = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRecordFilter = new System.Windows.Forms.ToolStripMenuItem();
             this.fakeLabel1 = new UserControls.FakeLabel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnCheckData = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -73,8 +75,6 @@
             this.btnUploadFile = new System.Windows.Forms.Button();
             this.txtPath = new System.Windows.Forms.TextBox();
             this.btnSearchFile = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tsmiPriceZero = new System.Windows.Forms.ToolStripMenuItem();
             this.gBox.SuspendLayout();
             this.gBoxShow.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -310,6 +310,14 @@
             this.tsmiQtyOverFlow.Text = "Qty Overflow";
             this.tsmiQtyOverFlow.Click += new System.EventHandler(this.tsmiQtyOverFlow_Click);
             // 
+            // tsmiPriceZero
+            // 
+            this.tsmiPriceZero.Image = ((System.Drawing.Image)(resources.GetObject("tsmiPriceZero.Image")));
+            this.tsmiPriceZero.Name = "tsmiPriceZero";
+            this.tsmiPriceZero.Size = new System.Drawing.Size(152, 22);
+            this.tsmiPriceZero.Text = "Unit Price Zero";
+            this.tsmiPriceZero.Click += new System.EventHandler(this.tsmiPriceZero_Click);
+            // 
             // tsmiChooseFilter
             // 
             this.tsmiChooseFilter.Image = ((System.Drawing.Image)(resources.GetObject("tsmiChooseFilter.Image")));
@@ -372,6 +380,17 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(276, 76);
             this.panel4.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 8F);
+            this.label7.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label7.Location = new System.Drawing.Point(0, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(160, 16);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "2.Unit Price not equal to zero";
             // 
             // btnCheckData
             // 
@@ -599,25 +618,6 @@
             this.btnSearchFile.Text = "SearchFile   ";
             this.btnSearchFile.UseVisualStyleBackColor = true;
             this.btnSearchFile.Click += new System.EventHandler(this.btnSearchFile_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 8F);
-            this.label7.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label7.Location = new System.Drawing.Point(0, 55);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 16);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "2.Unit Price not equal to zero";
-            // 
-            // tsmiPriceZero
-            // 
-            this.tsmiPriceZero.Image = ((System.Drawing.Image)(resources.GetObject("tsmiPriceZero.Image")));
-            this.tsmiPriceZero.Name = "tsmiPriceZero";
-            this.tsmiPriceZero.Size = new System.Drawing.Size(152, 22);
-            this.tsmiPriceZero.Text = "Unit Price Zero";
-            this.tsmiPriceZero.Click += new System.EventHandler(this.tsmiPriceZero_Click);
             // 
             // GetGongDanListForm
             // 
