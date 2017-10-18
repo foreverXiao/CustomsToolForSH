@@ -934,8 +934,12 @@ namespace eCustoms
 
             strFilter = "";
             dvPublicPD.RowFilter = "";
-            string strSQL = "SELECT C.*, B.[Duty Rate] FROM C_PingDan AS C LEFT JOIN (SELECT DISTINCT [FG CHN Name], [Duty Rate] FROM B_HsCode) AS B ON " + 
-                            "C.[FG CHN Name] = B.[FG CHN Name] WHERE C.[IE Type] = 'RM-D'" + strBrowse + " ORDER BY C.[Group ID], C.[GongDan No]";
+            string strSQL = "SELECT C.*, L.[Delivery No], B.[Duty Rate] FROM (C_PingDan AS C LEFT JOIN (SELECT DISTINCT [FG CHN Name], [Duty Rate] FROM B_HsCode) AS B ON " +
+                            "C.[FG CHN Name] = B.[FG CHN Name]) LEFT JOIN L_GongDan_Fulfillment As L ON C.[GongDan No] = L.[GongDan No] WHERE C.[IE Type] = 'RM-D'" + strBrowse + " ORDER BY C.[Group ID], C.[GongDan No]";
+
+            //string strSQL = "SELECT C.*, B.[Duty Rate] FROM C_PingDan AS C LEFT JOIN (SELECT DISTINCT [FG CHN Name], [Duty Rate] FROM B_HsCode) AS B ON " +
+            //                "C.[FG CHN Name] = B.[FG CHN Name] WHERE C.[IE Type] = 'RM-D'" + strBrowse + " ORDER BY C.[Group ID], C.[GongDan No]";
+            // Oct.13.2017
 
             SqlConnection ConnRMD = new SqlConnection(SqlLib.StrSqlConnection);
             if (ConnRMD.State == ConnectionState.Closed) { ConnRMD.Open(); }

@@ -339,7 +339,9 @@ namespace eCustoms
                     }
                     else  // use the BOM in the same FG to directly split the recycle qty into every existing RM
                     {
-                        
+                        //Stop this option according to user, user does not want the program to break the recycle into compoents same as the one in finished goods.  on Oct.17.2017
+                        if (1>1) 
+                        {
                             String batchNo = dtReckList.Rows[m]["Batch No"].ToString();
                             decimal dTotalInputQty = 0.0M;
                             
@@ -357,7 +359,7 @@ namespace eCustoms
                                 dr["Batch Path"] = "/" + strBatchNo + "/#";
                             }
                             myTable.AcceptChanges();
-                        
+                        }
                     }
                 }
                 dtReckList.Dispose();
