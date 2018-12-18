@@ -163,8 +163,8 @@ namespace eCustoms
                 return; 
             }
           
-            bool bJudge = this.txtPath.Text.ToLower().Contains(".xlsx");
-            this.ImportExcelData(this.txtPath.Text.Trim(), bJudge);
+            bool isLatestExcelFormatXLSX = this.txtPath.Text.ToLower().Contains(".xlsx");
+            this.ImportExcelData(this.txtPath.Text.Trim(), isLatestExcelFormatXLSX);
             ComsumptionRateEuqalTo100Percent();// Attach this function here to make sure operator will not miss this step  on June.22.2017
           
         }
@@ -177,10 +177,10 @@ namespace eCustoms
                             "\n\tTotal Input Qty, \n\tDrools Qty.", "Prompt", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public void ImportExcelData(string strFilePath, bool bJudge)
+        public void ImportExcelData(string strFilePath, bool isLatestExcelFormatXLSX)
         {
             string strConn;
-            if (bJudge) { strConn = @"Provider=Microsoft.Ace.OLEDB.12.0;Data Source=" + strFilePath + "; Extended Properties='Excel 12.0;HDR=Yes;IMEX=1'"; }
+            if (isLatestExcelFormatXLSX) { strConn = @"Provider=Microsoft.Ace.OLEDB.12.0;Data Source=" + strFilePath + "; Extended Properties='Excel 12.0;HDR=Yes;IMEX=1'"; }
             else { strConn = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + strFilePath + ";Extended Properties='Excel 8.0;HDR=Yes;IMEX=1'"; }
 
             OleDbConnection myConn = new OleDbConnection(strConn);
@@ -339,9 +339,7 @@ namespace eCustoms
                     }
                     else  // use the BOM in the same FG to directly split the recycle qty into every existing RM
                     {
-                        //Stop this option according to user, user does not want the program to break the recycle into compoents same as the one in finished goods.  on Oct.17.2017
-                        if (1>1) 
-                        {
+                        
                             String batchNo = dtReckList.Rows[m]["Batch No"].ToString();
                             decimal dTotalInputQty = 0.0M;
                             
@@ -359,7 +357,7 @@ namespace eCustoms
                                 dr["Batch Path"] = "/" + strBatchNo + "/#";
                             }
                             myTable.AcceptChanges();
-                        }
+                        
                     }
                 }
                 dtReckList.Dispose();
@@ -1054,15 +1052,15 @@ namespace eCustoms
             { MessageBox.Show("Please find out the uploading file.", "Prompt", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
             try
             {
-                bool bJudge = this.txtPathRpt.Text.ToLower().Contains(".xlsx");
-                String messageF = this.TidyUpDailyBom(this.txtPathRpt.Text.Trim(), bJudge);
+                bool isLatestExcelFormatXLSX = this.txtPathRpt.Text.ToLower().Contains(".xlsx");
+                String messageF = this.TidyUpDailyBom(this.txtPathRpt.Text.Trim(), isLatestExcelFormatXLSX);
                 if (!string.IsNullOrEmpty(messageF)) {MessageBox.Show(messageF, "Data Issues", MessageBoxButtons.OK, MessageBoxIcon.Warning); };
                 
             }
             catch (Exception) { throw; }
         }
 
-        public String TidyUpDailyBom(string strFilePath, bool bJudge) 
+        public String TidyUpDailyBom(string strFilePath, bool isLatestExcelFormatXLSX) 
         {
             String message1 = String.Empty;
             DataTable dtMessage = new DataTable();
@@ -1071,7 +1069,7 @@ namespace eCustoms
             dtMessage.Columns.Add("RM Item No", typeof(string));
             dtMessage.Columns.Add("Lot No", typeof(string));
             string strConn;
-            if (bJudge) { strConn = @"Provider=Microsoft.Ace.OLEDB.12.0;Data Source=" + strFilePath + "; Extended Properties='Excel 12.0;HDR=Yes;IMEX=1'"; }
+            if (isLatestExcelFormatXLSX) { strConn = @"Provider=Microsoft.Ace.OLEDB.12.0;Data Source=" + strFilePath + "; Extended Properties='Excel 12.0;HDR=Yes;IMEX=1'"; }
             else { strConn = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + strFilePath + ";Extended Properties='Excel 8.0;HDR=Yes;IMEX=1'"; }
 
             OleDbConnection RptConn = new OleDbConnection(strConn);
