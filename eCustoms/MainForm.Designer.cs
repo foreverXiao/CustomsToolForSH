@@ -89,7 +89,7 @@
             // 
             this.BasicData_TSMI.Image = ((System.Drawing.Image)(resources.GetObject("BasicData_TSMI.Image")));
             this.BasicData_TSMI.Name = "BasicData_TSMI";
-            this.BasicData_TSMI.Size = new System.Drawing.Size(147, 22);
+            this.BasicData_TSMI.Size = new System.Drawing.Size(152, 22);
             this.BasicData_TSMI.Text = "Basic Data";
             this.BasicData_TSMI.Click += new System.EventHandler(this.BasicData_TSMI_Click);
             // 
@@ -98,7 +98,7 @@
             this.RMReceiving_TMSI.Image = ((System.Drawing.Image)(resources.GetObject("RMReceiving_TMSI.Image")));
             this.RMReceiving_TMSI.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RMReceiving_TMSI.Name = "RMReceiving_TMSI";
-            this.RMReceiving_TMSI.Size = new System.Drawing.Size(147, 22);
+            this.RMReceiving_TMSI.Size = new System.Drawing.Size(152, 22);
             this.RMReceiving_TMSI.Text = "RM Receiving";
             this.RMReceiving_TMSI.Click += new System.EventHandler(this.RMReceiving_TMSI_Click);
             // 
@@ -107,7 +107,7 @@
             this.RMBalance_TMSI.Image = ((System.Drawing.Image)(resources.GetObject("RMBalance_TMSI.Image")));
             this.RMBalance_TMSI.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RMBalance_TMSI.Name = "RMBalance_TMSI";
-            this.RMBalance_TMSI.Size = new System.Drawing.Size(147, 22);
+            this.RMBalance_TMSI.Size = new System.Drawing.Size(152, 22);
             this.RMBalance_TMSI.Text = "RM Balance";
             this.RMBalance_TMSI.Click += new System.EventHandler(this.RMBalance_TMSI_Click);
             // 
@@ -115,7 +115,7 @@
             // 
             this.RMShareOut_TSMI.Image = ((System.Drawing.Image)(resources.GetObject("RMShareOut_TSMI.Image")));
             this.RMShareOut_TSMI.Name = "RMShareOut_TSMI";
-            this.RMShareOut_TSMI.Size = new System.Drawing.Size(147, 22);
+            this.RMShareOut_TSMI.Size = new System.Drawing.Size(152, 22);
             this.RMShareOut_TSMI.Text = "RM Share Out";
             // 
             // BOM_TSMI

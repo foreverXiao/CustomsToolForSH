@@ -1,0 +1,142 @@
+C:\Personal Info\Task File\eCustoms_20160930\eCustoms\bin\Debug\eCustoms.exe.config
+C:\Personal Info\Task File\eCustoms_20160930\eCustoms\obj\Debug\eCustoms.exe
+C:\Personal Info\Task File\eCustoms_20160930\eCustoms\obj\Debug\eCustoms.pdb
+C:\Users\700005630\Desktop\eCustoms\eCustoms\bin\Debug\eCustoms.exe.config
+C:\Users\700005630\Desktop\eCustoms\eCustoms\bin\Debug\eCustoms.exe
+C:\Users\700005630\Desktop\eCustoms\eCustoms\bin\Debug\eCustoms.pdb
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.GetBeiAnDanDataForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.GetBeiAnDanReportForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.GetDistributionBeiAnDanDataForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.GetBomDataForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.GetBomReporForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.GetGongDanDataForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.GetGongDanListForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.GetGongdanReportForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.GetDistributionPingDanDataForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.HistoryBeiAnDanDataForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.HistoryBomDataForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.HistoryGongDanDataForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.HistoryPingDanDataForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.LoginForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.MainForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.BasicDataForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.PopUpFilterForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.PopUpInfoForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.Properties.Resources.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.RMBalanceForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.RMReceivingForm.resources
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.csproj.GenerateResource.Cache
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.exe
+C:\Users\700005630\Desktop\eCustoms\eCustoms\obj\Debug\eCustoms.pdb
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\bin\Debug\eCustoms.exe.config
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.exe
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.pdb
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\bin\Debug\eCustoms.exe
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\bin\Debug\eCustoms.pdb
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.csprojResolveAssemblyReference.cache
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetBeiAnDanDataForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetBeiAnDanReportForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetDistributionBeiAnDanDataForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetBomDataForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetBomReporForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetGongDanDataForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetGongDanListForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetGongdanReportForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetDistributionPingDanDataForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.HistoryBeiAnDanDataForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.HistoryBomDataForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.HistoryGongDanDataForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.HistoryPingDanDataForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.LoginForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.MainForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.BasicDataForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.PopUpFilterForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.PopUpInfoForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.Properties.Resources.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.RMBalanceForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.RMReceivingForm.resources
+C:\Users\301000666\Documents\Backup\project\ProjectsJhnnL\Task File\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.csproj.GenerateResource.Cache
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\bin\Debug\eCustoms.exe.config
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.exe
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.pdb
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\bin\Debug\eCustoms.exe
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\bin\Debug\eCustoms.pdb
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetBeiAnDanDataForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetBeiAnDanReportForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetDistributionBeiAnDanDataForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetBomDataForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetBomReporForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetGongDanDataForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetGongDanListForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetGongdanReportForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetDistributionPingDanDataForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.HistoryBeiAnDanDataForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.HistoryBomDataForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.HistoryGongDanDataForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.HistoryPingDanDataForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.LoginForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.MainForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.BasicDataForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.PopUpFilterForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.PopUpInfoForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.Properties.Resources.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.RMBalanceForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.RMReceivingForm.resources
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.csproj.GenerateResource.Cache
+C:\Users\301000666\Documents\Backup\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.csprojResolveAssemblyReference.cache
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\bin\Debug\eCustoms.exe.config
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.exe
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.pdb
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\bin\Debug\eCustoms.exe
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\bin\Debug\eCustoms.pdb
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetBeiAnDanDataForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetBeiAnDanReportForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetDistributionBeiAnDanDataForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetBomDataForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetBomReporForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetGongDanDataForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetGongDanListForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetGongdanReportForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.GetDistributionPingDanDataForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.HistoryBeiAnDanDataForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.HistoryBomDataForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.HistoryGongDanDataForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.HistoryPingDanDataForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.LoginForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.MainForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.BasicDataForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.PopUpFilterForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.PopUpInfoForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.Properties.Resources.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.RMBalanceForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.RMReceivingForm.resources
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.csproj.GenerateResource.Cache
+C:\project\Customs_Tool\eCustoms_20161219\eCustoms\obj\Debug\eCustoms.csprojResolveAssemblyReference.cache
+C:\project\Customs_Tool\eCustoms\eCustoms\bin\Debug\eCustoms.exe.config
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.exe
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.pdb
+C:\project\Customs_Tool\eCustoms\eCustoms\bin\Debug\eCustoms.exe
+C:\project\Customs_Tool\eCustoms\eCustoms\bin\Debug\eCustoms.pdb
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.csprojResolveAssemblyReference.cache
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.GetBeiAnDanDataForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.GetBeiAnDanReportForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.GetDistributionBeiAnDanDataForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.GetBomDataForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.GetBomReporForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.GetGongDanDataForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.GetGongDanListForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.GetGongdanReportForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.GetDistributionPingDanDataForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.HistoryBeiAnDanDataForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.HistoryBomDataForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.HistoryGongDanDataForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.HistoryPingDanDataForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.LoginForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.MainForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.BasicDataForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.PopUpFilterForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.PopUpInfoForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.Properties.Resources.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.RMBalanceForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.RMReceivingForm.resources
+C:\project\Customs_Tool\eCustoms\eCustoms\obj\Debug\eCustoms.csproj.GenerateResource.Cache
